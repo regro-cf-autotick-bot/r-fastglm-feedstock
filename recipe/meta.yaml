@@ -1,4 +1,4 @@
-{% set version = '0.0.3' %}
+{% set version = "0.0.4" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/fastglm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/fastglm/fastglm_{{ version }}.tar.gz
-  sha256: 51281bb1a445be0921a48e1ec98edbf3d7f2f0cfe156494f8cabb380e69b0309
+  sha256: bc5d351ecc10769263e593e2b9730d83810fd39c7240d1c0b5427c2c4ec50064
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -54,9 +54,7 @@ test:
 about:
   home: https://CRAN.R-project.org/package=fastglm
   license: GPL-2.0-or-later
-  summary: Fits generalized linear models efficiently using 'RcppEigen'. The iteratively reweighted
-    least squares implementation utilizes the step-halving approach of Marschner (2011)
-    <doi:10.32614/RJ-2011-012> to help safeguard against convergence issues.
+  summary: Fits generalized linear models efficiently using 'RcppEigen'. The iteratively reweighted least squares implementation utilizes the step-halving approach of Marschner (2011) <doi:10.32614/RJ-2011-012> to help safeguard against convergence issues.
   license_family: GPL
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
